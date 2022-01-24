@@ -30,3 +30,21 @@ button {
 button:hover {
     background-color: hsl(176, 72%, 28%);
 }
+
+@media screen and (min-width: 1440px) {
+    header {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(images/image-hero-desktop.jpg) no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: 100%;
+    }
+}
+
+header {
+    background-image: url(images/image-hero-mobile.jpg) no-repeat;
+    background-position: center;
+}
+
+nav.menu {
+    z-index: 999;
+}
