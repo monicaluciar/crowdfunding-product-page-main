@@ -14,3 +14,19 @@ h2 {
     color: black;
     font-weight: 500;
 }
+
+button {
+    padding: 10px 24px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+}
+
+.primary-btn {
+    background-color: hsl(176, 50%, 47%);
+}
+
+button:hover {
+    background-color: hsl(176, 72%, 28%);
+}
