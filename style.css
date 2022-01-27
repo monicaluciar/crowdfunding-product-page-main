@@ -5,6 +5,15 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 body {
@@ -87,15 +96,6 @@ button:hover {
     background-color: hsl(176, 72%, 28%);
 }
 
-@media screen and (min-width: 1024px) {
-    header {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(images/image-hero-desktop.jpg) no-repeat;
-        background-position: center;
-        position: relative;
-        background-size: cover;
-        height: 400px;
-    }
-}
 
 header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
@@ -137,17 +137,37 @@ nav.menu {
     padding: 0.5em 1.2em;
 }
 
-.menu-items {
+.menu {
     display: flex;
     justify-content: space-around;
 
     color: #fff;
 }
 
-.menu-items li {
+.menu-horizontal {
+    display: none;
+}
+
+.menu-horizontal a {
     padding: 0.5em 1.2em;
 }
 
-ul li {
-    list-style: none;
+.menu-vertical a {
+    padding: 0.5em 1.2em;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+    header {
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)), url(images/image-hero-desktop.jpg) no-repeat;
+        background-position: center;
+        position: relative;
+        background-size: cover;
+        height: 400px;
+    }
+
+    .menu-horizontal {
+        display: block;
+    }
 }
