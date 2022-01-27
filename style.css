@@ -26,6 +26,10 @@ body {
 
 }
 
+.hidden {
+    display: none;
+}
+
 .mastercraft {
     position: absolute;
     top: -2%;
@@ -130,12 +134,13 @@ nav.menu {
     display: flex;
     position: relative;
     justify-content: space-between;
-    padding: 2em 6em;
+    padding: 2em 1em;
 }
 
+/*
 .logo {
-    padding: 0.5em 1.2em;
-}
+    padding: 0.5em 0.2em;
+}*/
 
 .menu {
     display: flex;
@@ -144,16 +149,31 @@ nav.menu {
     color: #fff;
 }
 
+.menu-vertical {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: center;
+    z-index: 1;
+    width: 60%;
+
+}
+
 .menu-horizontal {
     display: none;
 }
 
 .menu-horizontal a {
     padding: 0.5em 1.2em;
+
 }
+
 
 .menu-vertical a {
     padding: 0.5em 1.2em;
+    color: black;
+    display: inline-block;
 }
 
 
@@ -167,7 +187,27 @@ nav.menu {
         height: 400px;
     }
 
+    nav.menu {
+        z-index: 2;
+        display: flex;
+        position: relative;
+        justify-content: space-between;
+        padding: 2em 6em;
+    }
+
+    .logo {
+        padding: 0.5em 1.2em;
+    }
+
     .menu-horizontal {
         display: block;
+    }
+
+    .menu-vertical {
+        display: none;
+    }
+
+    .bar.menu {
+        display: none;
     }
 }
