@@ -130,18 +130,22 @@ nav.menu {
     display: flex;
     position: relative;
     justify-content: space-between;
+    padding: 2em 6em;
+}
 
+.logo {
+    padding: 0.5em 1.2em;
 }
 
 .menu-items {
     display: flex;
     justify-content: space-around;
-    padding: 0.5em 1.2em;
+
     color: #fff;
 }
 
 .menu-items li {
-    padding: 0.5em 1.2em
+    padding: 0.5em 1.2em;
 }
 
 ul li {
