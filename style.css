@@ -54,7 +54,7 @@ h1 {
 
 h2 {
     color: black;
-    font-weight: 500;
+    font-weight: 700;
     padding: 0.5em 0 1em 0;
 }
 
@@ -62,6 +62,10 @@ h3 {
     color: black;
     font-size: 2em;
     font-weight: 700;
+}
+
+.wrapper:nth-child(3) {
+    text-align: left;
 }
 
 .modal {
@@ -170,6 +174,11 @@ header {
     padding: 1.3em;
     margin-bottom: 15px;
     text-align: center;
+}
+
+.wrapper.card {
+    border: 1px solid var(--dark-grey);
+    text-align: left;
 }
 
 nav.menu {
