@@ -22,6 +22,8 @@ a {
     text-decoration: none;
 }
 
+
+
 body {
     font-size: 16px;
     font-family: 'Commissioner', sans-serif;
@@ -116,6 +118,7 @@ h3 {
     text-decoration: none;
     border: none;
     cursor: pointer;
+    width: fit-content;
 }
 
 .buttons-bottom {
@@ -123,6 +126,13 @@ h3 {
     margin: 1.8em 0;
     justify-content: space-evenly;
 }
+
+.bottom-wrapper {
+    display: flex;
+    margin: 1.2em 0;
+    flex-direction: column;
+}
+
 
 .primary-btn {
     background-color: var(--cyan);
@@ -177,8 +187,42 @@ header {
 }
 
 .wrapper.card {
-    border: 1px solid var(--dark-grey);
+    border: 1px solid var(--soft-grey);
     text-align: left;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.wrapper.card h4 {
+    color: black;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.wrapper.card a {
+    color: var(--cyan);
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+.wrapper.card span {
+    font-size: 2em;
+    color: black;
+    font-weight: 700;
+    margin-right: 0.5em;
+}
+
+.wrapper-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.reward {
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
 }
 
 nav.menu {
@@ -286,10 +330,15 @@ nav.menu {
 @media screen and (min-width: 768px) {
     #container {
         top: 38%;
+
     }
 
     .mastercraft {
         right: 43%;
+    }
+
+    .wrapper {
+        padding: 2.5em;
     }
 
     .metrics {
