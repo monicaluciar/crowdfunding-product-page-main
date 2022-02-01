@@ -37,9 +37,10 @@ body {
 }
 
 .mastercraft {
+    width: 100%;
     position: absolute;
-    top: -1.5%;
-    right: 40%;
+    top: -12%;
+    left: 0;
 }
 
 p {
@@ -104,6 +105,7 @@ h3 {
     background: var(--soft-grey);
     width: 100%;
     height: 0.7em;
+    margin-bottom: 1em;
 }
 
 .cyan-bar {
@@ -183,6 +185,7 @@ header {
     padding: 1.3em;
     margin-bottom: 15px;
     text-align: center;
+    position: relative;
 }
 
 .wrapper.card {
@@ -195,7 +198,7 @@ header {
 
 .wrapper.card h4 {
     color: black;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 700;
     margin-bottom: 0.5em;
 }
@@ -338,9 +341,9 @@ nav.menu {
 
     }
 
-    .mastercraft {
+    /* .mastercraft {
         right: 43%;
-    }
+    } */
 
     .wrapper {
         padding: 1.3em 2.5em;
