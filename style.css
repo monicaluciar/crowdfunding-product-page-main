@@ -29,7 +29,6 @@ body {
     font-weight: 400;
     background-color: #f7f7f7;
 
-
 }
 
 .hidden {
@@ -87,9 +86,7 @@ h3 {
 }
 
 .grey-line {
-
     border-bottom: 1px solid var(--soft-grey);
-
     width: 50%;
 }
 
@@ -116,7 +113,6 @@ h3 {
     text-decoration: none;
     border: none;
     cursor: pointer;
-
 }
 
 .buttons-bottom {
@@ -149,7 +145,6 @@ h3 {
 .bookmark-text {
     display: none;
 }
-
 
 header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
@@ -189,9 +184,7 @@ nav.menu {
 .logo {
     padding: 0.5em 0.2em;
 }*/
-
 /*menu para moviles start*/
-
 .menu {
     display: flex;
     justify-content: space-around;
@@ -208,7 +201,6 @@ nav.menu {
     padding: 6em 2.5em;
     top: 0;
     display: none;
-
 }
 
 .menu-vertical {
@@ -226,7 +218,6 @@ nav.menu {
     border-bottom: 1px solid var(--soft-grey);
     font-size: 5vw;
     font-weight: 500;
-
 }
 
 .menu-vertical a:last-child {
@@ -234,16 +225,13 @@ nav.menu {
 }
 
 /*menu mobile end*/
-
 .menu-horizontal {
     display: none;
 }
 
 .menu-horizontal a {
     padding: 0.5em 1.2em;
-
 }
-
 
 @media screen and (min-width: 1024px) {
     header {
@@ -255,11 +243,9 @@ nav.menu {
     }
 
     nav.menu {
-
         z-index: 2;
         display: flex;
         position: relative;
-
         justify-content: space-between;
         padding: 2.5em 6em 2em 6em;
     }
@@ -286,11 +272,17 @@ nav.menu {
         top: 45%;
     }
 
-
 }
 
-
 @media screen and (min-width: 768px) {
+    #container {
+        top: 38%;
+    }
+
+    .mastercraft {
+        right: 43%;
+    }
+
     .metrics {
         flex-direction: row;
         align-items: center;
@@ -312,5 +304,23 @@ nav.menu {
         padding: 2.5em 0em;
         border-bottom: none;
         border-left: 1px solid var(--soft-grey);
+    }
+
+    .buttons-bottom {
+        justify-content: space-between;
+        padding: 0em 1.5em;
+    }
+
+    .bookmark-text {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+        font-weight: 700;
+    }
+
+    #bookmark {
+        background: var(--soft-grey);
+        border-radius: 50px;
     }
 }
