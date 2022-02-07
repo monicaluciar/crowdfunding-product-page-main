@@ -10,8 +10,8 @@
 :root {
     --cyan: hsl(176, 50%, 47%);
     --dark-cyan: hsl(176, 72%, 28%);
-    --dark-grey: hsl(0, 0%, 48%);
-    --soft-grey: hsl(0, 0%, 89%);
+    --dark-grey: #7a7a7a;
+    --soft-grey: #e3e3e3;
 }
 
 ul li {
@@ -28,6 +28,8 @@ body {
     color: var(--dark-grey);
     font-weight: 400;
     background-color: #f7f7f7;
+    overflow: overlay;
+    padding-right: 1em;
 }
 
 .hidden {
@@ -204,7 +206,8 @@ header {
 }
 
 .wrapper.card span,
-.pledge-card span {
+.rew-pledge-m span,
+.rew-pledge-m span {
     font-size: 2em;
     color: black;
     font-weight: 700;
@@ -229,7 +232,7 @@ header {
 }
 
 nav.menu {
-    z-index: 2;
+    z-index: 3;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -247,6 +250,15 @@ nav.menu {
     color: #fff;
 }
 
+.bar-menu {
+    background: url(/images/icon-hamburger.svg) no-repeat center;
+    width: 1em;
+}
+
+.close-menu {
+    background: url(/images/icon-close-menu.svg) no-repeat center;
+}
+
 .menu-box {
     /* border: 1px solid red; */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
@@ -257,10 +269,11 @@ nav.menu {
     padding: 6em 2.5em;
     top: 0;
     display: none;
+    transition: 1s;
 }
 
 .open {
-    display: block;
+    display: block !important;
 }
 
 .menu-vertical {
@@ -270,6 +283,8 @@ nav.menu {
     justify-content: center;
     padding: 0 0.8em;
     border-radius: 10px;
+    position: fixed;
+    width: 80%;
 }
 
 .menu-vertical a {
@@ -304,17 +319,21 @@ nav.menu {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow: scroll;
+    transition: all 0.5ms ease-in-out;
 }
 
 .modal {
-    width: 70%;
-    height: 90%;
-    overflow: hidden;
+    width: 90%;
+    text-align: left;
+
+    position: absolute;
+    top: 2em;
+
 }
 
 .modal-content {
-    overflow: hidden scroll;
+
     display: grid;
     gap: 2em;
     height: 80%;
@@ -322,17 +341,125 @@ nav.menu {
     padding: 0.5em;
 }
 
+.modal-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.modal-close {
+    background: url(/images/icon-close-modal.svg) no-repeat center;
+    width: 1em;
+    height: 1em;
+    cursor: pointer;
+}
+
 .pledge-card {
     position: relative;
     border-radius: 1em;
-    padding: 1.5em;
+
     border: 1px solid var(--soft-grey);
     text-align: left;
     display: grid;
-    grid-template-columns: 5% 95%;
+    /* grid-template-columns: 5% 95%; */
     gap: 1em;
 
 }
+
+.pledge-card .card-content {
+    padding: 1.5em;
+}
+
+.pledge-head {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+label {
+    cursor: pointer;
+}
+
+.pledge-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.rew-pledge-d {
+    display: none;
+}
+
+.rew-pledge-m {
+    margin-top: 1em;
+}
+
+.rew-pledge-m span {
+    font-size: 1.5em;
+}
+
+.pledge-radio {
+    position: relative;
+
+}
+
+.radio:checked+.radio-select {
+    background: red;
+}
+
+.radio {
+    visibility: hidden;
+}
+
+.radio-select {
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 20px;
+    border: 1px solid red;
+    left: 0;
+    position: absolute;
+}
+
+.enter-pledge {
+    display: flex;
+    border-top: 1px solid var(--soft-grey);
+    padding: 1.5em;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.mount {
+    border-radius: 50px;
+    border: 1px solid var(--soft-grey);
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 0.5em 1.2em;
+    gap: 0.5em;
+}
+
+.input-mount {
+    width: 3em;
+    line-height: 2.5em;
+    border: none;
+    color: black;
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+input::placeholder {
+    color: black;
+}
+
+.pledge-mount {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6em;
+    margin-top: 1.2em;
+}
+
 
 .select-pledge {
     width: 3em;
